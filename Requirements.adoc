@@ -250,7 +250,8 @@ The main people concerned by the system are:
 
     - **Library users**, who borrow and reserve books. Their needs include a simple interface, clear due dates, and notifications.
     - **Librarians**, who manage the catalog, loans, and user accounts. They need efficient tools to save time on daily tasks.
-    - **Library management**, who want reports and a system aligned with library policies.
+    - **Library Administrators** : They are responsible for setting the library rules and monitoring operations. Their needs guided the design of system configuration features and reporting functions.
+
 
 [[g7-exp2]]
 `G.7.{counter:g7}`
