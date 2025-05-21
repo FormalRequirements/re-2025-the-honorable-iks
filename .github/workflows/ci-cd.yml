@@ -1,0 +1,25 @@
+name: Generating requirements outpout from asciidoc.
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  generate_requirements:
+    runs-on: ubuntu-latest
+    name: Generate and deploy HTML requirements. 
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Asciidoctor text processing.
+      id: asciiToHtml
+      uses: tonynv/asciidoctor-action@master
+      with:
+          program: "asciidoctor -o ./reqOutput/index.html Requirements.adoc"
+    - name: Deploy generated file to github pages.
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        # publish branch default: gh-pages
+        publish_dir: ./reqOutput  # default: public
