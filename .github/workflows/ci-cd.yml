@@ -1,0 +1,21 @@
+name: Generate requirement outpout from asciidoc file
+
+on:
+  push:
+    branches:
+    - feat/pipeline
+
+jobs:
+  generate_pdf:
+    runs-on: ubuntu-latest
+    name: generating a pdf using asciidoctor 
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Get build container
+      id: pdfReq
+      uses: tonynv/asciidoctor-action@master
+      with:
+          program: "asciidoctor-pdf Requirements.adoc"
+
+    
