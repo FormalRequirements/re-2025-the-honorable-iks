@@ -8,7 +8,7 @@ on:
 jobs:
   generate_pdf:
     runs-on: ubuntu-latest
-    name: generating a pdf using asciidoctor 
+    name: generating an html 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -21,6 +21,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: feat/pipeline
+        publish_branch: generated_pdf
 
     
