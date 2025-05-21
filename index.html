@@ -538,55 +538,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_goals">Goals</h2>
 <div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>Many libraries still use outdated systems that slow down daily tasks. This project defines the requirements for a simple, modern Library Management System (LMS) to improve how books and users are managed.
+The goal is to build a clear, adaptable foundation for future development.</p>
 </div>
 <div class="sect2">
 <h3 id="G1">G.1 Context and overall objectives</h3>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-High-level view of the project: organizational context and reason for building a system (see <a href="https://se.inf.ethz.ch/requirements/">Handbook</a>).
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-This chapter should not be empty (following the <em>Minimum Requirements Outcome Principle</em>, p.27 of the <a href="https://se.inf.ethz.ch/requirements/">Handbook</a>).
-</td>
-</tr>
-</table>
-</div>
 <div id="g1-exp1" class="paragraph">
-<p><code>1</code>
-Example of numbered requirement (see <a href="#g1-exp2">another example</a>).</p>
+<p><code>G.1.1</code>
+The public library system is designed to simplify and organize the book lending process across different library branches, making it easier for both users and staff to manage borrowings efficiently.</p>
 </div>
 <div id="g1-exp2" class="paragraph">
 <p><code>G.1.2</code>
-Another example of numbered requirement, more explicit in its numbering (see <a href="#g1-exp1">another example</a>).</p>
+The system should help users easily place holds, check out books, and manage their interactions with the library collection in a clear and user-friendly way.</p>
 </div>
 <div id="g1-exp3" class="paragraph">
-<p><sup><code>G.1.3</code></sup>
-A third example of numbered requirement, with a less intrusive numbering style (the one adopted in the Companion book).</p>
+<p><code>G.1.3</code>
+The system ensures that books are made available to users while respecting fair borrowing rules, such as limits on reservations and returning books on time to avoid overdue situations.</p>
 </div>
 </div>
 <div class="sect2">
@@ -603,39 +571,10 @@ Current state of processes to be addressed by the project and the resulting syst
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>Example of To Be Done action:</p>
+<div id="g2-exp1" class="paragraph">
+<p><code>G.2.1</code>
+There is no centralized, modern system in place. The structure and features of the future Library Management System are still being defined.</p>
 </div>
-<details>
-<summary class="title">TBD</summary>
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Author</dt>
-<dd>
-<p><a href="https://github.com/nhonorisg">Honoris</a> &amp; <a href="https://github.com/ikram-filali">Ikram</a></p>
-</dd>
-<dt class="hdlist1">Date</dt>
-<dd>
-<p>2025-05-19</p>
-</dd>
-<dt class="hdlist1">Needs</dt>
-<dd>
-<div class="ulist checklist">
-<ul class="checklist">
-<li>
-<p><i class="fa fa-square-o"></i> stakeholders to ask</p>
-</li>
-<li>
-<p><i class="fa fa-square-o"></i> documentation to consider</p>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-</details>
 </div>
 <div class="sect2">
 <h3 id="G3">G.3 Expected benefits</h3>
@@ -663,6 +602,26 @@ This chapter should not be empty (following the <em>Minimum Requirements Outcome
 </tr>
 </table>
 </div>
+<div id="g3-exp1" class="paragraph">
+<p><code>G.3.1</code>
+Librarians can easily add new books to the system, including details like title, author, and number of copies. This helps new books become available to users more quickly.</p>
+</div>
+<div id="g3-exp2" class="paragraph">
+<p><code>G.3.2</code>
+Users can manage their loans, reservations, and account online, without needing to ask a librarian for help. This saves time for everyone.</p>
+</div>
+<div id="g3-exp3" class="paragraph">
+<p><code>G.3.3</code>
+Users get alerts when a reserved book becomes available, or when a due date is approaching. This avoids surprises and missed returns.</p>
+</div>
+<div id="g3-exp4" class="paragraph">
+<p><code>G.3.4</code>
+The system keeps track of books that are returned late. It can warn users and apply small penalties if needed, based on the library’s rules.</p>
+</div>
+<div id="g3-exp5" class="paragraph">
+<p><code>G.3.5</code>
+Library rules (like how long you can borrow a book or how many renewals are allowed) are applied automatically by the system, so everyone is treated equally.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_g_4_functionality_overview">G.4 Functionality overview</h3>
@@ -678,8 +637,33 @@ Overview of the functions (behavior) of the system. Principal properties only (d
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><span class="icon"><i class="fa fa-warning"></i></span> Nothing available at this point.</p>
+<div id="g4-exp1" class="paragraph">
+<p><code>G.4.1</code>
+Users can search for books by title, author, or genre. They can also use filters to find exactly what they’re looking for faster.</p>
+</div>
+<div id="g4-exp2" class="paragraph">
+<p><code>G.4.2</code>
+Each user has their own page where they can see their current loans, reservations, due dates, and past activity.</p>
+</div>
+<div id="g4-exp3" class="paragraph">
+<p><code>G.4.3</code>
+Users can reserve books, even if they are currently borrowed. The system manages a waiting list and alerts users when it’s their turn.</p>
+</div>
+<div id="g4-exp4" class="paragraph">
+<p><code>G.4.4</code>
+Users can renew their loans if no one else is waiting for the book.</p>
+</div>
+<div id="g4-exp5" class="paragraph">
+<p><code>G.4.5</code>
+Librarians can manage the catalog, add or remove books, monitor usage, and apply changes to rules or policies through a dedicated interface.</p>
+</div>
+<div id="g4-exp6" class="paragraph">
+<p><code>G.4.6</code>
+The system sends reminders before a book is due. If the return is late, it can apply the appropriate rules automatically.</p>
+</div>
+<div id="g4-exp7" class="paragraph">
+<p><code>G.4.7</code>
+The system knows where each copy of a book is (borrowed, reserved, or on the shelf).</p>
 </div>
 </div>
 <div class="sect2">
@@ -696,8 +680,21 @@ Fundamental usage paths through the system (see <a href="https://se.inf.ethz.ch/
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><span class="icon"><i class="fa fa-warning"></i></span> Nothing available at this point.</p>
+<div id="g5-exp1" class="paragraph">
+<p><code>G.5.1</code>
+Encourage More Visitors</p>
+</div>
+<div id="g5-exp2" class="paragraph">
+<p><code>G.5.2</code>
+Help Students Find What They Need</p>
+</div>
+<div id="g5-exp3" class="paragraph">
+<p><code>G.5.3</code>
+Smooth Experience for Regular Users</p>
+</div>
+<div id="g5-exp4" class="paragraph">
+<p><code>G.5.4</code>
+Better Book Circulation</p>
 </div>
 </div>
 <div class="sect2">
@@ -714,8 +711,13 @@ Aspects that the system need not address (see <a href="https://se.inf.ethz.ch/re
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><span class="icon"><i class="fa fa-warning"></i></span> Nothing available at this point.</p>
+<div id="g6-exp1" class="paragraph">
+<p><code>G.6.1</code>
+The system will not handle digital content such as e-books, remote file access, or integration with online academic libraries. It is also not meant to support payments, subscriptions, or any kind of financial transaction.</p>
+</div>
+<div id="g6-exp2" class="paragraph">
+<p><code>G.6.2</code>
+Physical logistics like book shelving, RFID tracking, or managing multiple library branches are not part of this system.</p>
 </div>
 </div>
 <div class="sect2">
@@ -743,6 +745,41 @@ This chapter should not be empty (following the <em>Minimum Requirements Outcome
 </td>
 </tr>
 </table>
+</div>
+<div id="g7-exp1" class="paragraph">
+<p><code>G.7.1</code>
+<strong>Key Stakeholders</strong>
+The main people concerned by the system are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Library users</strong>, who borrow and reserve books. Their needs include a simple interface, clear due dates, and notifications.</p>
+</li>
+<li>
+<p><strong>Librarians</strong>, who manage the catalog, loans, and user accounts. They need efficient tools to save time on daily tasks.</p>
+</li>
+<li>
+<p><strong>Library management</strong>, who want reports and a system aligned with library policies.</p>
+</li>
+</ul>
+</div>
+<div id="g7-exp2" class="paragraph">
+<p><code>G.7.2</code>
+To define the system’s needs, we are relying on:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Real-life usage of library systems we know or have observed.</p>
+</li>
+<li>
+<p>Feedback from students and staff who use university libraries.</p>
+</li>
+<li>
+<p>Documentation and templates from <a href="https://requirements.university" class="bare">https://requirements.university</a> to ensure alignment with PEGS methodology.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -1219,7 +1256,7 @@ Initially, description of what the requirements process will be; later, report o
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-05-21 12:08:17 UTC
+Last updated 2025-05-21 12:43:15 UTC
 </div>
 </div>
 </body>
