@@ -78,35 +78,36 @@ toc::[]
 //------------------------------------
 
 == Goals
+Many libraries still use outdated systems that slow down daily tasks. This project defines the requirements for a simple, modern Library Management System (LMS) to improve how books and users are managed.
+The goal is to build a clear, adaptable foundation for future development.
+//[NOTE]
+//====
 
-[NOTE]
-====
-
-====
+//====
 
 [[G1]]
 === G.1 Context and overall objectives
 
-NOTE: High-level view of the project: organizational context and reason for building a system (see {Handbook}).
+//NOTE: 
 
-WARNING: This chapter should not be empty (following the _Minimum Requirements Outcome Principle_, p.27 of the {handbook}).
+//WARNING: This chapter should not be empty (following the _Minimum Requirements Outcome Principle_, p.27 of the {handbook}).
 
 //---- Requirement
 [[g1-exp1]]
-`{counter:g1}`
-Example of numbered requirement (see <<g1-exp2, another example>>).
+`G.1.{counter:g1}`
+The public library system is designed to simplify and organize the book lending process across different library branches, making it easier for both users and staff to manage borrowings efficiently.
 //---- 
 
 //---- Requirement
 [[g1-exp2]]
 `G.1.{counter:g1}`
-Another example of numbered requirement, more explicit in its numbering (see <<g1-exp1, another example>>).
+The system should help users easily place holds, check out books, and manage their interactions with the library collection in a clear and user-friendly way.
 //---- 
 
 //---- Requirement
 [[g1-exp3]]
-^`G.1.{counter:g1}`^
-A third example of numbered requirement, with a less intrusive numbering style (the one adopted in the Companion book).
+`G.1.{counter:g1}`
+The system ensures that books are made available to users while respecting fair borrowing rules, such as limits on reservations and returning books on time to avoid overdue situations.
 //---- 
 
 [[G2]]
@@ -114,23 +115,27 @@ A third example of numbered requirement, with a less intrusive numbering style (
 
 NOTE: Current state of processes to be addressed by the project and the resulting system (see {Handbook}).
 
+[[g2-exp1]]
+`G.2.{counter:g2}`
+There is no centralized, modern system in place. The structure and features of the future Library Management System are still being defined.
 
-Example of To Be Done action:
+
+//Example of To Be Done action:
 
 //---- TBD: To Be Determined
-.TBD
-[%collapsible]
-====
-Author:: {Honoris} & {Ikram}
-Date:: 2025-05-19 
+//.TBD
+//[%collapsible]
+//====
+//Author:: {Honoris} & {Ikram}
+//Date:: 2025-05-19 
 // Deadline:: 2023-12-24
 // Importance:: serious
 //show-stopper / serious / desirable
-Needs:: 
-- [ ] stakeholders to ask
-- [ ] documentation to consider
+//Needs:: 
+//- [ ] stakeholders to ask
+//- [ ] documentation to consider
 // - [x] management decision (by {jmb})
-====
+//====
 
 [[G3]]
 === G.3 Expected benefits 
@@ -139,29 +144,121 @@ NOTE: New processes, or improvements to existing processes, made possible by the
 
 WARNING: This chapter should not be empty (following the _Minimum Requirements Outcome Principle_, p.27 of the {handbook}).
 
+[[g3-exp1]]
+`G.3.{counter:g3}`
+Librarians can easily add new books to the system, including details like title, author, and number of copies. This helps new books become available to users more quickly.
+
+[[g3-exp2]]
+`G.3.{counter:g3}`
+Users can manage their loans, reservations, and account online, without needing to ask a librarian for help. This saves time for everyone.
+
+
+[[g3-exp3]]
+`G.3.{counter:g3}`
+Users get alerts when a reserved book becomes available, or when a due date is approaching. This avoids surprises and missed returns.
+
+[[g3-exp4]]
+`G.3.{counter:g3}`
+The system keeps track of books that are returned late. It can warn users and apply small penalties if needed, based on the library’s rules.
+
+[[g3-exp5]]
+`G.3.{counter:g3}`
+Library rules (like how long you can borrow a book or how many renewals are allowed) are applied automatically by the system, so everyone is treated equally.
+
+
+
+
 === G.4 Functionality overview
 
 NOTE: Overview of the functions (behavior) of the system. Principal properties only (details are in the System book) (see {Handbook}).
 
-{emptysec}
+[[g4-exp1]]
+`G.4.{counter:g4}`
+Users can search for books by title, author, or genre. They can also use filters to find exactly what they’re looking for faster.
+
+[[g4-exp2]]
+`G.4.{counter:g4}`
+Each user has their own page where they can see their current loans, reservations, due dates, and past activity.
+
+[[g4-exp3]]
+`G.4.{counter:g4}`
+Users can reserve books, even if they are currently borrowed. The system manages a waiting list and alerts users when it’s their turn.
+
+[[g4-exp4]]
+`G.4.{counter:g4}`
+Users can renew their loans if no one else is waiting for the book.
+
+[[g4-exp5]]
+`G.4.{counter:g4}`
+Librarians can manage the catalog, add or remove books, monitor usage, and apply changes to rules or policies through a dedicated interface.
+
+[[g4-exp6]]
+`G.4.{counter:g4}`
+The system sends reminders before a book is due. If the return is late, it can apply the appropriate rules automatically.
+
+[[g4-exp7]]
+`G.4.{counter:g4}`
+The system knows where each copy of a book is (borrowed, reserved, or on the shelf).
+
 
 === G.5 High-level usage scenarios 
 
 NOTE: Fundamental usage paths through the system (see {Handbook}).
 
-{emptysec}
+[[g5-exp1]]
+`G.5.{counter:g5}`
+Encourage More Visitors
+
+[[g5-exp2]]
+`G.5.{counter:g5}`
+Help Students Find What They Need
+
+[[g5-exp3]]
+`G.5.{counter:g5}`
+Smooth Experience for Regular Users
+
+[[g5-exp4]]
+`G.5.{counter:g5}`
+Better Book Circulation
+
+
+
+
 
 === G.6 Limitations and exclusions 
 
 NOTE: Aspects that the system need not address (see {Handbook}).
 
-{emptysec}
+[[g6-exp1]]
+`G.6.{counter:g6}`
+The system will not handle digital content such as e-books, remote file access, or integration with online academic libraries. It is also not meant to support payments, subscriptions, or any kind of financial transaction.
+
+[[g6-exp2]]
+`G.6.{counter:g6}`
+Physical logistics like book shelving, RFID tracking, or managing multiple library branches are not part of this system. 
 
 === G.7 Stakeholders and requirements sources
 
 NOTE: Groups of people who can affect the project or be affected by it, and other places to consider for information about the project and system (see {Handbook}).
 
 WARNING: This chapter should not be empty (following the _Minimum Requirements Outcome Principle_, p.27 of the {handbook}).
+
+[[g7-exp1]]
+`G.7.{counter:g7}`
+**Key Stakeholders**
+The main people concerned by the system are:
+
+    - **Library users**, who borrow and reserve books. Their needs include a simple interface, clear due dates, and notifications.
+    - **Librarians**, who manage the catalog, loans, and user accounts. They need efficient tools to save time on daily tasks.
+    - **Library management**, who want reports and a system aligned with library policies.
+
+[[g7-exp2]]
+`G.7.{counter:g7}`
+To define the system’s needs, we are relying on:
+
+- Real-life usage of library systems we know or have observed.
+- Feedback from students and staff who use university libraries.
+- Documentation and templates from https://requirements.university to ensure alignment with PEGS methodology.
 
 //------------------------------------
 // ENVIRONMENT book
