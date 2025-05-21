@@ -38,7 +38,7 @@ endif::[]
 :Catalog:  <<Catalog, Catalog>>
 // PERSONS ENTRIES
 :Ikram: 
-:Honoris: https://github.com/nhonorisg
+:Honoris: https://github.com/nhonorisg[Honoris]
 
 [NOTE]
 ====
