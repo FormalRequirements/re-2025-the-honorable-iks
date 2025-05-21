@@ -1,4 +1,4 @@
-name: Generate requirement outpout from asciidoc file
+name: Generate requirements outpout from asciidoc file
 
 on:
   push:
@@ -13,15 +13,13 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Get build container
-      id: pdfReq
+      id: generatedRequirements
       uses: tonynv/asciidoctor-action@master
       with:
-          program: "asciidoctor Requirements.adoc"
+          program: "asciidoctor -o ./reqOutput/index.html Requirements.adoc"
     - name: Deploy generated file to github pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        # publish branch not setup, default is gh-pages
-        # publish dir not setup, deafault is public
-
-    
+        publish_branch: requirements-preview # default: gh-pages
+        publish_dir: ./reqOutput  # default: public
