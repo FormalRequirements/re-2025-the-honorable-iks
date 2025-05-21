@@ -37,7 +37,7 @@ endif::[]
 :Book: <<Book, Book>>
 :Catalog:  <<Catalog, Catalog>>
 // PERSONS ENTRIES
-:Ikram: 
+:Ikram: https://github.com/ikram-filali[Ikram]
 :Honoris: https://github.com/nhonorisg[Honoris]
 
 [NOTE]
