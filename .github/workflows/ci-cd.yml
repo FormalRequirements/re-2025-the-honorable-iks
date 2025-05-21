@@ -21,5 +21,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: requirements-preview # default: gh-pages
+        # publish branch default: gh-pages
         publish_dir: ./reqOutput  # default: public
