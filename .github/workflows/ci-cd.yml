@@ -17,10 +17,11 @@ jobs:
       uses: tonynv/asciidoctor-action@master
       with:
           program: "asciidoctor Requirements.adoc"
-    - name: Deploy generated pdf to github pages
+    - name: Deploy generated file to github pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: generated_pdf
+        # publish branch not setup, default is gh-pages
+        # publish dir not setup, deafault is public
 
     
