@@ -16,6 +16,11 @@ jobs:
       id: pdfReq
       uses: tonynv/asciidoctor-action@master
       with:
-          program: "asciidoctor-pdf Requirements.adoc"
+          program: "asciidoctor Requirements.adoc"
+    - name: Deploy generated pdf to github pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: feat/pipeline
 
     
