@@ -79,10 +79,18 @@ toc::[]
 
 == Goals
 
-[NOTE]
-====
+//[NOTE]
+//====
+Goals are "needs of the target organization, which the system will address". 
+While the development team is the principal user of the other books, the Goals book addresses a wider audience: essentially, all stakeholders (see {Handbook}).
 
-====
+It must contain enough information to provide â€” if read just by itself â€” a general sketch of the entire project. 
+To this effect, chapter G.3 presents a short overview of the system and <<G1,G.1>> will typically include some key properties of the environment. 
+As it addresses a wide readership, it should be clear and minimize the use of specialized technical terms. 
+Together, <<G1,G.1>>, <<G2,G.2>> and <<G3,G.3>> describe the rationale for the project. 
+It is important to state these justifications explicitly. 
+Typically, they are well understood at the start of the project, but management and priorities can change  (see {Handbook}).
+//====
 
 [[G1]]
 === G.1 Context and overall objectives
@@ -91,22 +99,25 @@ NOTE: High-level view of the project: organizational context and reason for buil
 
 WARNING: This chapter should not be empty (following the _Minimum Requirements Outcome Principle_, p.27 of the {handbook}).
 
+Many libraries still use outdated systems that slow down daily tasks. This project defines the requirements for a simple, modern Library Management System (LMS) to improve how books and users are managed.
+The goal is to build a clear, adaptable foundation for future development.
+
 //---- Requirement
 [[g1-exp1]]
-`{counter:g1}`
-Example of numbered requirement (see <<g1-exp2, another example>>).
+`G.1.{counter:g1}`
+The public library system is designed to simplify and organize the book lending process across different library branches, making it easier for both users and staff to manage borrowings efficiently.
 //---- 
 
 //---- Requirement
 [[g1-exp2]]
 `G.1.{counter:g1}`
-Another example of numbered requirement, more explicit in its numbering (see <<g1-exp1, another example>>).
+The system should help users easily place holds, check out books, and manage their interactions with the library collection in a clear and user-friendly way.
 //---- 
 
 //---- Requirement
 [[g1-exp3]]
-^`G.1.{counter:g1}`^
-A third example of numbered requirement, with a less intrusive numbering style (the one adopted in the Companion book).
+`G.1.{counter:g1}`
+The system ensures that books are made available to users while respecting fair borrowing rules, such as limits on reservations and returning books on time to avoid overdue situations.
 //---- 
 
 [[G2]]
@@ -114,23 +125,27 @@ A third example of numbered requirement, with a less intrusive numbering style (
 
 NOTE: Current state of processes to be addressed by the project and the resulting system (see {Handbook}).
 
+[[g2-exp1]]
+`G.2.{counter:g2}`
+There is no centralized, modern system in place. The structure and features of the future Library Management System are still being defined.
 
-Example of To Be Done action:
+
+//Example of To Be Done action:
 
 //---- TBD: To Be Determined
-.TBD
-[%collapsible]
-====
-Author:: {Honoris} & {Ikram}
-Date:: 2025-05-19 
+//.TBD
+//[%collapsible]
+//====
+//Author:: {Honoris} & {Ikram}
+//Date:: 2025-05-19 
 // Deadline:: 2023-12-24
 // Importance:: serious
 //show-stopper / serious / desirable
-Needs:: 
-- [ ] stakeholders to ask
-- [ ] documentation to consider
+//Needs:: 
+//- [ ] stakeholders to ask
+//- [ ] documentation to consider
 // - [x] management decision (by {jmb})
-====
+//====
 
 [[G3]]
 === G.3 Expected benefits 
@@ -139,29 +154,122 @@ NOTE: New processes, or improvements to existing processes, made possible by the
 
 WARNING: This chapter should not be empty (following the _Minimum Requirements Outcome Principle_, p.27 of the {handbook}).
 
+[[g3-exp1]]
+`G.3.{counter:g3}`
+Librarians can easily add new books to the system, including details like title, author, and number of copies. This helps new books become available to users more quickly.
+
+[[g3-exp2]]
+`G.3.{counter:g3}`
+Users can manage their loans, reservations, and account online, without needing to ask a librarian for help. This saves time for everyone.
+
+
+[[g3-exp3]]
+`G.3.{counter:g3}`
+Users get alerts when a reserved book becomes available, or when a due date is approaching. This avoids surprises and missed returns.
+
+[[g3-exp4]]
+`G.3.{counter:g3}`
+The system keeps track of books that are returned late. It can warn users and apply small penalties if needed, based on the library’s rules.
+
+[[g3-exp5]]
+`G.3.{counter:g3}`
+Library rules (like how long you can borrow a book or how many renewals are allowed) are applied automatically by the system, so everyone is treated equally.
+
+
+
+
 === G.4 Functionality overview
 
 NOTE: Overview of the functions (behavior) of the system. Principal properties only (details are in the System book) (see {Handbook}).
 
-{emptysec}
+[[g4-exp1]]
+`G.4.{counter:g4}`
+Users can search for books by title, author, or genre. They can also use filters to find exactly what they’re looking for faster.
+
+[[g4-exp2]]
+`G.4.{counter:g4}`
+Each user has their own page where they can see their current loans, reservations, due dates, and past activity.
+
+[[g4-exp3]]
+`G.4.{counter:g4}`
+Users can reserve books, even if they are currently borrowed. The system manages a waiting list and alerts users when it’s their turn.
+
+[[g4-exp4]]
+`G.4.{counter:g4}`
+Users can renew their loans if no one else is waiting for the book.
+
+[[g4-exp5]]
+`G.4.{counter:g4}`
+Librarians can manage the catalog, add or remove books, monitor usage, and apply changes to rules or policies through a dedicated interface.
+
+[[g4-exp6]]
+`G.4.{counter:g4}`
+The system sends reminders before a book is due. If the return is late, it can apply the appropriate rules automatically.
+
+[[g4-exp7]]
+`G.4.{counter:g4}`
+The system knows where each copy of a book is (borrowed, reserved, or on the shelf).
+
 
 === G.5 High-level usage scenarios 
 
 NOTE: Fundamental usage paths through the system (see {Handbook}).
 
-{emptysec}
+[[g5-exp1]]
+`G.5.{counter:g5}`
+Encourage More Visitors
+
+[[g5-exp2]]
+`G.5.{counter:g5}`
+Help Students Find What They Need
+
+[[g5-exp3]]
+`G.5.{counter:g5}`
+Smooth Experience for Regular Users
+
+[[g5-exp4]]
+`G.5.{counter:g5}`
+Better Book Circulation
+
+
+
+
 
 === G.6 Limitations and exclusions 
 
 NOTE: Aspects that the system need not address (see {Handbook}).
 
-{emptysec}
+[[g6-exp1]]
+`G.6.{counter:g6}`
+The system will not handle digital content such as e-books, remote file access, or integration with online academic libraries. It is also not meant to support payments, subscriptions, or any kind of financial transaction.
+
+[[g6-exp2]]
+`G.6.{counter:g6}`
+Physical logistics like book shelving, RFID tracking, or managing multiple library branches are not part of this system. 
 
 === G.7 Stakeholders and requirements sources
 
 NOTE: Groups of people who can affect the project or be affected by it, and other places to consider for information about the project and system (see {Handbook}).
 
 WARNING: This chapter should not be empty (following the _Minimum Requirements Outcome Principle_, p.27 of the {handbook}).
+
+[[g7-exp1]]
+`G.7.{counter:g7}`
+**Key Stakeholders**
+The main people concerned by the system are:
+
+    - **Library users**, who borrow and reserve books. Their needs include a simple interface, clear due dates, and notifications.
+    - **Librarians**, who manage the catalog, loans, and user accounts. They need efficient tools to save time on daily tasks.
+    - **Library Administrators** : They are responsible for setting the library rules and monitoring operations. Their needs guided the design of system configuration features and reporting functions.
+
+
+[[g7-exp2]]
+`G.7.{counter:g7}`
+To define the system’s needs, we are relying on:
+
+- Real-life usage of library systems we know or have observed.
+- Feedback from students and staff who use university libraries.
+- Documentation and templates from https://requirements.university to ensure alignment with PEGS methodology.
 
 //------------------------------------
 // ENVIRONMENT book
@@ -247,29 +355,323 @@ NOTE: Overall structure expressed by the list of major software and, if applicab
 
 WARNING: This chapter should not be empty (following the _Minimum Requirements Outcome Principle_, p.27 of the {handbook}).
 
+[[s1-exp1]]
+`S.1.{counter:s1}`
+**User Interface : **
+The web-based interface used by librarians and users. It includes the home page, search bar, user dashboard, and admin panel. It allows interaction with the system in a simple and intuitive way.
+
+[[s1-exp2]]
+`S.1.{counter:s1}`
+**Catalog Management Module : **
+Handles the storage and organization of all books and media in the library. It supports searching, filtering, and classification by metadata (title, author, genre, status).
+
+[[s1-exp3]]
+`S.1.{counter:s1}`
+**Loan and Reservation Module : **
+Manages borrowing, returns, renewals, and reservations. It also applies rules (loan duration, renew limits) based on the user type and book status.
+
+[[s1-exp4]]
+`S.1.{counter:s1}`
+**User Management Module : **
+Stores user information and login credentials. It tracks their current loans, reservation history, and late returns. It also enforces borrowing restrictions if needed.
+
+[[s1-exp5]]
+`S.1.{counter:s1}`
+**Notification System : **
+Sends alerts to users about book availability, due dates, or overdue books via email or dashboard messages.
+
+[[s1-exp6]]
+`S.1.{counter:s1}`
+**Database : **
+Stores all data about users, books, reservations, and system configuration. Ensures consistency and quick access for all modules.
+
+[[s1-exp7]]
+`S.1.{counter:s1}`
+**Admin Tools : **
+Used by library staff to configure system rules, add new books, view reports, and manage the entire system efficiently.
+
+[[s1-exp8]]
+`S.1.{counter:s1}`
+**Authentication System : **
+Manages login and role-based access (user vs librarian). Can later be connected to an existing university identity provider.
+
 === S.2 Functionality
 
 NOTE: One section, S.2.n, for each of the components identified in S.1, describing the corresponding behaviors (functional and non-functional properties; see {Handbook}).
 
 WARNING: This chapter should not be empty (following the _Minimum Requirements Outcome Principle_, p.27 of the {handbook}).
 
+=== S.2 Functionality
+
+[[s2-ui]]
+`S.2.{counter:s2}` 
+**User Interface**
+
+The UI allows users and librarians to interact with the system. It should be simple, responsive, and accessible. Key behaviors include:
+
+- Displaying available books with filters and search tools.
+- Showing personalized dashboards (loans, reservations, alerts).
+- Ensuring consistent display across devices and browsers.
+- Guiding the user clearly through the reservation or return process.
+
+[[s2-catalog]]
+`S.2.{counter:s2}`
+**Catalog Management Module**
+
+This module:
+
+- Stores all book metadata (title, author, ISBN, status, etc.).
+- Allows librarians to add, modify or delete books.
+- Supports fast and flexible search (by title, author, genre).
+- Updates availability in real-time when books are borrowed or returned.
+
+Non-functional: Must respond to search queries in under 1 second for a database of 10,000+ entries.
+
+[[s2-loans]]
+`S.2.{counter:s2}`
+**Loan and Reservation Module**
+
+This module manages the entire lifecycle of a book transaction:
+
+- Allows users to borrow books if available and within their loan limits.
+- Lets users reserve a book already borrowed.
+- Applies rules like loan duration or number of renewals.
+- Cancels reservations if not picked up on time.
+
+Non-functional: Ensures no double booking of the same book copy.
+
+[[s2-users]]
+`S.2.{counter:s2}`
+**User Management Module**
+
+This module:
+
+- Handles user registration, login, and roles.
+- Keeps a history of user activity (reservations, loans, penalties).
+- Enforces borrowing limitations.
+
+Non-functional: Protects user data according to GDPR principles.
+
+[[s2-notifs]]
+`S.2.{counter:s2}`
+**Notification System**
+
+This module:
+
+- Sends automatic alerts before due dates.
+- Notifies users when a reserved book is available or a loan is late.
+- Allows users to manage their notification preferences (e.g., email only).
+
+Non-functional: Ensures delivery within 5 minutes of event trigger.
+
+[[s2-db]]
+`S.2.{counter:s2}`
+**Database**
+
+The database:
+
+- Stores all persistent data (books, users, transactions).
+- Is structured to allow fast queries and scalability.
+- Supports regular backups and protects against data corruption.
+
+Non-functional: Database must support 99.9% uptime and backup every 24h.
+
+[[s2-admin]]
+`S.2.{counter:s2}`
+**Admin Tools**
+
+This module:
+
+- Provides staff with access to advanced tools for managing users, books, and policies.
+- Generates statistics and reports (most borrowed books, late returns).
+- Lets staff configure system behavior (loan limits, penalties).
+
+Non-functional: Interface should be intuitive and require no technical knowledge.
+
+[[s2-auth]]
+`S.2.{counter:s2}`
+**Authentication System**
+
+This system:
+
+- Differentiates between users and librarians with role-based access.
+- Verifies credentials securely.
+- Can later integrate with a central identity provider (e.g., university SSO).
+
+Non-functional: Must comply with best practices for password encryption and access control.
+
+
 === S.3 Interfaces
 
 NOTE: How the system makes the functionality of S.2 available to the rest of the world, particularly user interfaces and program interfaces (APIs) (see {Handbook}).
 
-{emptysec}
+=== S.3 Interfaces
+
+[[s3-ui]]
+`S.3.{counter:s3}`
+**Graphical User Interface (GUI)**
+
+At this stage, all interactions with the system are performed through a web-based user interface. This interface is designed to be:
+
+- Accessible via standard web browsers.
+- Divided into sections based on user roles (user vs. librarian).
+- Responsive and easy to use, even for non-technical users.
+
+The interface provides access to all key functionalities described in S.2: catalog search, reservations, account management, and administration.
+
+[[s3-api]]
+`S.3.{counter:s3}`
+**Future API Integration (Planned)**
+
+Although no programmatic interface (API) is available in the current version, future development may include:
+
+- A REST API for integration with external systems (e.g., university portals).
+- Endpoints for retrieving book data, user status, or system statistics.
+
+These additions would support automation, mobile applications, or third-party services.
+
 
 === S.4 Detailed usage scenarios
 
 NOTE: Examples of interaction between the environment (or human users) and the system: use cases, user stories (see {Handbook}).
 
-{emptysec}
+=== S.4 Detailed usage scenarios
+
+[[s4-scenario1]]
+`S.4.{counter:s4}`
+**User Story: Reserving a Book**
+
+As a student, I want to search for a book and reserve it online, so I can pick it up as soon as it becomes available.
+
+→ The system shows the current status of the book.
+
+→ If the book is borrowed, the system adds me to the reservation queue.
+
+→ I receive an email notification when it’s my turn to pick up the book.
+
+[[s4-scenario2]]
+`S.4.{counter:s4}`
+**User Story: Managing a Late Return**
+
+As a librarian, I want the system to automatically detect late returns and apply the corresponding rules, so I don’t have to check each user manually.
+
+→ The system flags the loan as overdue when the due date has passed.  
+
+→ The user receives an automatic reminder and warning by email.  
+
+→ If the book is still not returned, the system applies the penalty.
+
+→ I can review and override the penalty if needed through the admin panel.
+
+
+[[s4-scenario3]]
+`S.4.{counter:s4}`
+**User Story: Managing My Account**
+
+As a regular user, I want to log in to my personal dashboard to check which books I’ve borrowed, when they are due, and if I can renew them.
+
+→ I access my dashboard after logging in.
+
+→ I see a list of current loans with due dates.
+
+→ I click on a book to renew it, if allowed.
+
+[[s4-scenario4]]
+`S.4.{counter:s4}`
+**User Story: Adding a New Book**
+
+As a librarian, I want to add a new book to the catalog with all its details, so it can be borrowed by users.
+
+→ I access the admin panel.
+
+→ I fill in the book information (title, author, copies, status).
+
+→ The book appears in the public catalog immediately.
+
+[[s4-scenario5]]
+`S.4.{counter:s4}`
+**User Story: Checking Availability Before Visiting**
+
+As a visitor, I want to check online if a book is available in the library, so I don’t waste time coming for nothing.
+
+→ I search the book by title on the public site.
+
+→ I see that it’s available and on which shelf.
+
+→ I go to the library to borrow it.
+
 
 === S.5 Prioritization
 
 NOTE: Classification of the behaviors, interfaces and scenarios (S.2, S.3 and S.4) by their degree of criticality (see {Handbook}).
 
-{emptysec}
+=== S.5 Prioritization
+
+[cols="1,1,1"]
+|===
+|Element | Description | Priority
+
+|S.2.1 – User Interface
+|Main access point for users and librarians. Needed for all interactions.
+|Critical
+
+|S.2.2 – Catalog Management Module
+|Core of the system: handles book data and availability.
+|Critical
+
+|S.2.3 – Loan and Reservation Module
+|Manages borrowing and reservations. Central to system usage.
+|Critical
+
+|S.2.4 – User Management Module
+|Stores and controls user access and rights.
+|Important
+
+|S.2.5 – Notification System
+|Improves user experience but can be delayed or simplified in MVP.
+|Optional
+
+|S.2.6 – Database
+|Ensures persistent and consistent storage of data.
+|Critical
+
+|S.2.7 – Admin Tools
+|Support daily operations of the librarians.
+|Important
+
+|S.2.8 – Authentication System
+|Protects system access, especially for sensitive librarian functions.
+|Critical
+
+|S.3.1 – Graphical User Interface
+|Essential for using the system.
+|Critical
+
+|S.3.2 – Future API Integration
+|Not required in the first version but useful later.
+|Optional
+
+|S.4.1 – Reserving a Book
+|Core use case for users.
+|Critical
+
+|S.4.2 – Managing a Late Return
+|Important for enforcing library rules.
+|Important
+
+|S.4.3 – Managing My Account
+|Useful for user autonomy.
+|Important
+
+|S.4.4 – Adding a New Book
+|Necessary for catalog updates.
+|Critical
+
+|S.4.5 – Checking Availability Before Visiting
+|Improves experience but not strictly required.
+|Optional
+|===
+
 
 === S.6 Verification and acceptance criteria
 
