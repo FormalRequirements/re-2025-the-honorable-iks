@@ -953,7 +953,47 @@ NOTE: External systems, hardware and software, expected to be necessary for buil
 
 NOTE: Potential obstacles to meeting the schedule of P.4, and measures for adapting the plan if they do arise (see {Handbook}).
 
-{emptysec}
+=== P.6 Risk and Mitigation Analysis ⚠️
+
+This section identifies potential risks that may affect the successful completion of the project, particularly with respect to the tasks and milestones in P.4, along with mitigation strategies.
+
+[cols="1,2,2"]
+|===
+| Risk | Description | Mitigation Strategy
+
+| **R1 – Technical Complexity**
+| Integrating multiple technologies (Spring, React, PostgreSQL, Docker) may cause unexpected bugs or delays.
+| Begin with a small proof of concept for each component. Plan extra buffer time in early sprints.
+
+| **R2 – Lack of familiarity with tools**
+| Team members may lack experience with some parts of the stack.
+| Allocate time for guided onboarding, tutorials, and pair programming during the first two weeks.
+
+| **R3 – Feature creep**
+| New feature ideas might be added mid-project, risking delay or scope loss.
+| Stick to a defined MVP. Any additional features are moved to a backlog for post-M10 consideration.
+
+| **R4 – Insufficient test coverage**
+| Lack of automated tests could lead to regressions and unstable releases.
+| Define test tasks per milestone (P.4) and enforce CI checks on every commit.
+
+| **R5 – Incomplete requirements**
+| Some functional details might be misunderstood or missing at implementation time.
+| Validate requirements early with librarian feedback. Update documentation iteratively.
+
+| **R6 – Integration delays**
+| Back-end and front-end teams might fall out of sync during API integration.
+| Use API contracts (e.g., Swagger/OpenAPI) and mock servers to allow parallel development.
+
+| **R7 – Team availability or dropout**
+| Team members may become unavailable due to personal or academic reasons.
+| Distribute knowledge and responsibilities. Maintain clear documentation to ease handovers.
+
+| **R8 – Deployment issues**
+| Errors may arise during deployment or Docker configuration.
+| Test deployments regularly in staging environment using GitHub Actions.
+|===
+
 
 === P.7 Requirements process and report
 
