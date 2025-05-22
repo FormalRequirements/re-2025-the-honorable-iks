@@ -12,6 +12,10 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+    - name: Check non empty chapters
+      run: |
+        chmod +x check_non_empty_chapters.sh
+        ./check_non_empty_chapters.sh
     - name: Asciidoctor text processing.
       id: asciiToHtml
       uses: tonynv/asciidoctor-action@master
