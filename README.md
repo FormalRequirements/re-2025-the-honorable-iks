@@ -12,7 +12,7 @@ We tried to structure our development approach so that each chapter of the requi
 
 - `main` - default branch.
 - `requirements-chapter` - Branches for each requirement chapter.
--`feature/name` - Other features needed for the project.
+- `feature/name` - Other features needed for the project.
 - `gh-pages` - This branch is used to deploy HTML generated requirements on Github pages. 
  
 ## Requirements Documentation Strategy
