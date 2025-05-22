@@ -84,7 +84,7 @@ toc::[]
 Goals are "needs of the target organization, which the system will address". 
 While the development team is the principal user of the other books, the Goals book addresses a wider audience: essentially, all stakeholders (see {Handbook}).
 
-It must contain enough information to provide â€” if read just by itself â€” a general sketch of the entire project. 
+It must contain enough information to provide a general sketch of the entire project. 
 To this effect, chapter G.3 presents a short overview of the system and <<G1,G.1>> will typically include some key properties of the environment. 
 As it addresses a wide readership, it should be clear and minimize the use of specialized technical terms. 
 Together, <<G1,G.1>>, <<G2,G.2>> and <<G3,G.3>> describe the rationale for the project. 
@@ -697,25 +697,251 @@ NOTE: The Project book describes all the constraints and expectations not about 
 
 NOTE: Main responsibilities in the project; required project staff and their needed qualifications (see {Handbook}).
 
-{emptysec}
+=== P.1 Roles and Personnel 🧑‍💼📚
+
+Main responsibilities and required qualifications for the project team.
+
+[[p1-pm]]
+`P.1.{counter:p1}`
+**Project Manager**  
+Oversees the planning and progress of the project. Ensures deadlines are met and communication flows between team members. Should have skills in coordination, scheduling, and basic knowledge of library processes.
+
+[[p1-ba]]
+`P.1.{counter:p1}`
+**Requirements Analyst**  
+
+Collects and structures requirements based on input from librarians, users, and institutional goals. Needs strong communication, analytical thinking, and basic understanding of library workflows.
+
+[[p1-ux]]
+`P.1.{counter:p1}`
+**UX/UI Designer**  
+
+Designs interfaces that are intuitive for users and staff. Must understand accessibility, responsive design, and typical behaviors of library users.
+
+[[p1-dev]]
+`P.1.{counter:p1}`
+**Full-Stack Developer**  
+
+Implements the system’s functionalities across front-end and back-end. Requires skills in web development, database management, and integration of user-facing features with core logic.
+
+[[p1-devops]]
+`P.1.{counter:p1}`
+**DevOps Engineer**  
+
+Sets up and maintains the infrastructure, automates deployment workflows, and ensures that changes can be integrated and delivered continuously. Should be skilled in cloud services, container technologies, and CI/CD tools.
+
+[[p1-libconsult]]
+`P.1.{counter:p1}`
+**Librarian Consultant**  
+
+Provides domain knowledge: lending rules, cataloging standards, and user needs. Helps validate whether the system aligns with real library practices. Ideally someone with hands-on library experience.
+
+
+[[p1-writer]]
+`P.1.{counter:p1}`
+**Requirements Editor / Technical Writer**
+
+Maintains the AsciiDoc documents, ensures clarity and coherence, and prepares the final export to PDF. Requires writing skills and basic familiarity with version control systems like Git.
+
+
 
 === P.2 Imposed technical choices
 
 NOTE: Any a priori choices binding the project to specific tools, hardware, languages or other technical parameters (see {Handbook}).
 
-{emptysec}
+
+The project is bound to specific technologies and design principles that will guide the development of the Library Management System (LMS).
+
+[[p2-exp1]]
+`P.2.{counter:p2}`
+**Java 17 : **  
+Chosen as the primary programming language for back-end development due to its robustness, strong typing, and ecosystem support.
+
+[[p2-exp2]]
+`P.2.{counter:p2}`
+**Spring Boot : **  
+Main framework for building the application. It simplifies the creation of REST APIs, integrates well with databases, and supports dependency injection out of the box.
+
+[[p2-exp3]]
+`P.2.{counter:p2}`
+**PostgreSQL : **  
+Relational database system used to store data about users, books, loans, and reservations. Offers strong ACID compliance and is open source.
+
+[[p2-exp4]]
+`P.2.{counter:p2}`
+**Docker : **  
+Used to containerize the application for easier deployment and environment consistency across development, testing, and production.
+
+[[p2-exp5]]
+`P.2.{counter:p2}`
+**React.js : **  
+Front-end library chosen to develop a responsive and user-friendly web interface for both users and librarians.
+
+[[p2-exp6]]
+`P.2.{counter:p2}`
+**Maven : **  
+Build and dependency management tool for compiling, testing, and packaging the Java backend.
+
+[[p2-exp7]]
+`P.2.{counter:p2}`
+**JUnit 5 and Mockito : **  
+Used for unit and integration testing of backend services to ensure reliability and test coverage.
+
+[[p2-exp9]]
+`P.2.{counter:p2}`
+**RESTful APIs : **  
+All communication between front-end and back-end is based on REST principles for simplicity and interoperability.
+
+[[p2-exp10]]
+`P.2.{counter:p2}`
+**Git + GitHub : **  
+Used for version control and collaboration. All code is stored and managed through GitHub with branching strategies and CI pipelines.
+
+
 
 === P.3 Schedule and milestones
 
 NOTE: List of tasks to be carried out and their scheduling (see {Handbook}).
 
 WARNING: This chapter should not be empty (following the _Minimum Requirements Outcome Principle_, p.27 of the {handbook}).
+=== P.3 Schedule and Milestones 📅
+
+This section outlines the major phases and expected milestones for the development of the Library Management System (LMS). Each milestone marks the delivery of a significant feature or stage of the project.
+
+[cols="1,3,1"]
+|===
+| Milestone ID | Description | Target Date
+
+| M1
+| **Project Setup**  
+Initialize Git repository, define technical stack (Java, Spring Boot, React, PostgreSQL), configure Docker, and prepare project documentation.
+| Week 1
+
+| M2
+| **Domain Modeling and Architecture Design**  
+Design the system's core domain model using DDD and define high-level architecture (Hexagonal + REST APIs). Create database schema and component structure.
+| Week 2
+
+| M3
+| **User & Authentication Module**  
+Implement user registration, login, roles (user/librarian), and basic access control with JWT or session management.
+| Week 3
+
+| M4
+| **Catalog Management**  
+Implement book catalog: CRUD for books, metadata management, search and filtering capabilities.
+| Week 5
+
+| M5
+| **Loan & Reservation System**  
+Develop features to allow book borrowing, returning, reservation queues, overdue handling, and validation rules.
+| Week 7
+
+| M6
+| **Notification System**  
+Set up email and in-app notifications for due dates, reservation availability, and late return warnings.
+| Week 8
+
+| M7
+| **Librarian Admin Dashboard**  
+Create an admin panel for librarians to manage books, users, and lending policies.
+| Week 9
+
+| M8
+| **Front-end Integration**  
+Develop and connect React-based UI with all back-end endpoints. Ensure responsiveness and role-based views.
+| Week 10
+
+| M9
+| **Testing & QA**  
+Conduct unit, integration, and UI testing (JUnit, Mockito, Cypress). Run performance and usability tests.
+| Week 11
+
+| M10
+| **Final Deployment & Documentation**  
+Deploy application using Docker. Deliver user manual, API documentation, and technical report.
+| Week 12
+|===
+
 
 === P.4 Tasks and deliverables
 
 NOTE: Details of individual tasks listed under P.3 and their expected outcomes (see {Handbook}).
 
 WARNING: This chapter should not be empty (following the _Minimum Requirements Outcome Principle_, p.27 of the {handbook}).
+
+=== P.4 Tasks and Deliverables 📦
+
+This section details the main tasks associated with each milestone from the project schedule and the corresponding deliverables.
+
+[cols="1,3,2"]
+|===
+| Task ID | Description | Deliverable
+
+| T1.1
+| Set up GitHub repository, initialize folder structure, add README and project license.
+| Repository initialized with documentation baseline.
+
+| T1.2
+| Define the technical stack and tools (Java, Spring Boot, PostgreSQL, React, Docker, GitHub Actions).
+| Technical stack document in `/docs/`.
+
+| T2.1
+| Model domain entities (User, Book, Loan, Reservation) using DDD principles.
+| UML class diagram + Entity definitions in code.
+
+| T2.2
+| Design the system architecture (Hexagonal + REST + PostgreSQL + CI).
+| Architecture overview document (`architecture.adoc`).
+
+| T3.1
+| Implement user registration, authentication, and role-based access (JWT or sessions).
+| Working API for login/signup + user DB schema.
+
+| T4.1
+| Develop book catalog CRUD (create, read, update, delete).
+| REST endpoints for books + integration tests.
+
+| T4.2
+| Implement search and filter functionality.
+| Search API + basic UI component for catalog.
+
+| T5.1
+| Implement book borrowing and return workflow.
+| Loan controller, rules engine, unit tests.
+
+| T5.2
+| Manage reservations with FIFO queue and expiration logic.
+| Reservation service + edge-case tests.
+
+| T6.1
+| Add email notification service (due dates, reservations).
+| Mailer module + mock email tests.
+
+| T7.1
+| Build admin dashboard with views for managing users and books.
+| React UI pages for librarians + role restrictions.
+
+| T8.1
+| Connect React front-end to backend APIs using Axios or Fetch.
+| Front-end forms and data rendering working for MVP.
+
+| T9.1
+| Write and run JUnit and Mockito tests for backend.
+| Test coverage report (>80%) + CI status badge.
+
+| T9.2
+| Perform manual and automated UI tests (e.g., Cypress).
+| Usability test report + bug list (if any).
+
+| T10.1
+| Containerize application with Docker Compose (backend + frontend + DB).
+| `docker-compose.yml` + deployment instructions.
+
+| T10.2
+| Write user guide, API documentation, and installation manual.
+| `/docs/` folder with complete documentation in AsciiDoc or Markdown.
+|===
 
 === P.5 Required technology elements
 
@@ -727,7 +953,47 @@ NOTE: External systems, hardware and software, expected to be necessary for buil
 
 NOTE: Potential obstacles to meeting the schedule of P.4, and measures for adapting the plan if they do arise (see {Handbook}).
 
-{emptysec}
+=== P.6 Risk and Mitigation Analysis ⚠️
+
+This section identifies potential risks that may affect the successful completion of the project, particularly with respect to the tasks and milestones in P.4, along with mitigation strategies.
+
+[cols="1,2,2"]
+|===
+| Risk | Description | Mitigation Strategy
+
+| **R1 – Technical Complexity**
+| Integrating multiple technologies (Spring, React, PostgreSQL, Docker) may cause unexpected bugs or delays.
+| Begin with a small proof of concept for each component. Plan extra buffer time in early sprints.
+
+| **R2 – Lack of familiarity with tools**
+| Team members may lack experience with some parts of the stack.
+| Allocate time for guided onboarding, tutorials, and pair programming during the first two weeks.
+
+| **R3 – Feature creep**
+| New feature ideas might be added mid-project, risking delay or scope loss.
+| Stick to a defined MVP. Any additional features are moved to a backlog for post-M10 consideration.
+
+| **R4 – Insufficient test coverage**
+| Lack of automated tests could lead to regressions and unstable releases.
+| Define test tasks per milestone (P.4) and enforce CI checks on every commit.
+
+| **R5 – Incomplete requirements**
+| Some functional details might be misunderstood or missing at implementation time.
+| Validate requirements early with librarian feedback. Update documentation iteratively.
+
+| **R6 – Integration delays**
+| Back-end and front-end teams might fall out of sync during API integration.
+| Use API contracts (e.g., Swagger/OpenAPI) and mock servers to allow parallel development.
+
+| **R7 – Team availability or dropout**
+| Team members may become unavailable due to personal or academic reasons.
+| Distribute knowledge and responsibilities. Maintain clear documentation to ease handovers.
+
+| **R8 – Deployment issues**
+| Errors may arise during deployment or Docker configuration.
+| Test deployments regularly in staging environment using GitHub Actions.
+|===
+
 
 === P.7 Requirements process and report
 
