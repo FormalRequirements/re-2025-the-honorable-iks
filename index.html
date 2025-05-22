@@ -442,7 +442,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">Honoris Ndereyimana &amp; Ikram Filali</span><br>
 <span id="email" class="email"><a href="mailto:honoris-gratias.ndereyimana@etu.univ-tlse2.fr">honoris-gratias.ndereyimana@etu.univ-tlse2.fr</a>, <a href="mailto:ikram.filali@etu.univ-tlse2.fr">ikram.filali@etu.univ-tlse2.fr</a></span><br>
-<span id="revdate">1.0 -- 2025-05-21</span>
+<span id="revdate">1.0 -- 2025-05-22</span>
 </div>
 </div>
 <div id="content">
@@ -514,9 +514,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_s_1_components">S.1 Components</a></li>
 <li><a href="#_s_2_functionality">S.2 Functionality</a></li>
+<li><a href="#_s_2_functionality_2">S.2 Functionality</a></li>
 <li><a href="#_s_3_interfaces">S.3 Interfaces</a></li>
+<li><a href="#_s_3_interfaces_2">S.3 Interfaces</a></li>
 <li><a href="#_s_4_detailed_usage_scenarios">S.4 Detailed usage scenarios</a></li>
+<li><a href="#_s_4_detailed_usage_scenarios_2">S.4 Detailed usage scenarios</a></li>
 <li><a href="#_s_5_prioritization">S.5 Prioritization</a></li>
+<li><a href="#_s_5_prioritization_2">S.5 Prioritization</a></li>
 <li><a href="#_s_6_verification_and_acceptance_criteria">S.6 Verification and acceptance criteria</a></li>
 </ul>
 </li>
@@ -575,6 +579,10 @@ This chapter should not be empty (following the <em>Minimum Requirements Outcome
 </td>
 </tr>
 </table>
+</div>
+<div class="paragraph">
+<p>Many libraries still use outdated systems that slow down daily tasks. This project defines the requirements for a simple, modern Library Management System (LMS) to improve how books and users are managed.
+The goal is to build a clear, adaptable foundation for future development.</p>
 </div>
 <div id="g1-exp1" class="paragraph">
 <p><code>G.1.1</code>
@@ -1022,6 +1030,46 @@ This chapter should not be empty (following the <em>Minimum Requirements Outcome
 </tr>
 </table>
 </div>
+<div id="s1-exp1" class="paragraph">
+<p><code>S.1.1</code>
+<strong>User Interface : </strong>
+The web-based interface used by librarians and users. It includes the home page, search bar, user dashboard, and admin panel. It allows interaction with the system in a simple and intuitive way.</p>
+</div>
+<div id="s1-exp2" class="paragraph">
+<p><code>S.1.2</code>
+<strong>Catalog Management Module : </strong>
+Handles the storage and organization of all books and media in the library. It supports searching, filtering, and classification by metadata (title, author, genre, status).</p>
+</div>
+<div id="s1-exp3" class="paragraph">
+<p><code>S.1.3</code>
+<strong>Loan and Reservation Module : </strong>
+Manages borrowing, returns, renewals, and reservations. It also applies rules (loan duration, renew limits) based on the user type and book status.</p>
+</div>
+<div id="s1-exp4" class="paragraph">
+<p><code>S.1.4</code>
+<strong>User Management Module : </strong>
+Stores user information and login credentials. It tracks their current loans, reservation history, and late returns. It also enforces borrowing restrictions if needed.</p>
+</div>
+<div id="s1-exp5" class="paragraph">
+<p><code>S.1.5</code>
+<strong>Notification System : </strong>
+Sends alerts to users about book availability, due dates, or overdue books via email or dashboard messages.</p>
+</div>
+<div id="s1-exp6" class="paragraph">
+<p><code>S.1.6</code>
+<strong>Database : </strong>
+Stores all data about users, books, reservations, and system configuration. Ensures consistency and quick access for all modules.</p>
+</div>
+<div id="s1-exp7" class="paragraph">
+<p><code>S.1.7</code>
+<strong>Admin Tools : </strong>
+Used by library staff to configure system rules, add new books, view reports, and manage the entire system efficiently.</p>
+</div>
+<div id="s1-exp8" class="paragraph">
+<p><code>S.1.8</code>
+<strong>Authentication System : </strong>
+Manages login and role-based access (user vs librarian). Can later be connected to an existing university identity provider.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_s_2_functionality">S.2 Functionality</h3>
@@ -1051,6 +1099,199 @@ This chapter should not be empty (following the <em>Minimum Requirements Outcome
 </div>
 </div>
 <div class="sect2">
+<h3 id="_s_2_functionality_2">S.2 Functionality</h3>
+<div id="s2-ui" class="paragraph">
+<p><code>S.2.1</code>
+<strong>User Interface</strong></p>
+</div>
+<div class="paragraph">
+<p>The UI allows users and librarians to interact with the system. It should be simple, responsive, and accessible. Key behaviors include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Displaying available books with filters and search tools.</p>
+</li>
+<li>
+<p>Showing personalized dashboards (loans, reservations, alerts).</p>
+</li>
+<li>
+<p>Ensuring consistent display across devices and browsers.</p>
+</li>
+<li>
+<p>Guiding the user clearly through the reservation or return process.</p>
+</li>
+</ul>
+</div>
+<div id="s2-catalog" class="paragraph">
+<p><code>S.2.2</code>
+<strong>Catalog Management Module</strong></p>
+</div>
+<div class="paragraph">
+<p>This module:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Stores all book metadata (title, author, ISBN, status, etc.).</p>
+</li>
+<li>
+<p>Allows librarians to add, modify or delete books.</p>
+</li>
+<li>
+<p>Supports fast and flexible search (by title, author, genre).</p>
+</li>
+<li>
+<p>Updates availability in real-time when books are borrowed or returned.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Non-functional: Must respond to search queries in under 1 second for a database of 10,000+ entries.</p>
+</div>
+<div id="s2-loans" class="paragraph">
+<p><code>S.2.3</code>
+<strong>Loan and Reservation Module</strong></p>
+</div>
+<div class="paragraph">
+<p>This module manages the entire lifecycle of a book transaction:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Allows users to borrow books if available and within their loan limits.</p>
+</li>
+<li>
+<p>Lets users reserve a book already borrowed.</p>
+</li>
+<li>
+<p>Applies rules like loan duration or number of renewals.</p>
+</li>
+<li>
+<p>Cancels reservations if not picked up on time.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Non-functional: Ensures no double booking of the same book copy.</p>
+</div>
+<div id="s2-users" class="paragraph">
+<p><code>S.2.4</code>
+<strong>User Management Module</strong></p>
+</div>
+<div class="paragraph">
+<p>This module:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Handles user registration, login, and roles.</p>
+</li>
+<li>
+<p>Keeps a history of user activity (reservations, loans, penalties).</p>
+</li>
+<li>
+<p>Enforces borrowing limitations.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Non-functional: Protects user data according to GDPR principles.</p>
+</div>
+<div id="s2-notifs" class="paragraph">
+<p><code>S.2.5</code>
+<strong>Notification System</strong></p>
+</div>
+<div class="paragraph">
+<p>This module:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sends automatic alerts before due dates.</p>
+</li>
+<li>
+<p>Notifies users when a reserved book is available or a loan is late.</p>
+</li>
+<li>
+<p>Allows users to manage their notification preferences (e.g., email only).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Non-functional: Ensures delivery within 5 minutes of event trigger.</p>
+</div>
+<div id="s2-db" class="paragraph">
+<p><code>S.2.6</code>
+<strong>Database</strong></p>
+</div>
+<div class="paragraph">
+<p>The database:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Stores all persistent data (books, users, transactions).</p>
+</li>
+<li>
+<p>Is structured to allow fast queries and scalability.</p>
+</li>
+<li>
+<p>Supports regular backups and protects against data corruption.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Non-functional: Database must support 99.9% uptime and backup every 24h.</p>
+</div>
+<div id="s2-admin" class="paragraph">
+<p><code>S.2.7</code>
+<strong>Admin Tools</strong></p>
+</div>
+<div class="paragraph">
+<p>This module:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Provides staff with access to advanced tools for managing users, books, and policies.</p>
+</li>
+<li>
+<p>Generates statistics and reports (most borrowed books, late returns).</p>
+</li>
+<li>
+<p>Lets staff configure system behavior (loan limits, penalties).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Non-functional: Interface should be intuitive and require no technical knowledge.</p>
+</div>
+<div id="s2-auth" class="paragraph">
+<p><code>S.2.8</code>
+<strong>Authentication System</strong></p>
+</div>
+<div class="paragraph">
+<p>This system:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Differentiates between users and librarians with role-based access.</p>
+</li>
+<li>
+<p>Verifies credentials securely.</p>
+</li>
+<li>
+<p>Can later integrate with a central identity provider (e.g., university SSO).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Non-functional: Must comply with best practices for password encryption and access control.</p>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_s_3_interfaces">S.3 Interfaces</h3>
 <div class="admonitionblock note">
 <table>
@@ -1064,8 +1305,51 @@ How the system makes the functionality of S.2 available to the rest of the world
 </tr>
 </table>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_s_3_interfaces_2">S.3 Interfaces</h3>
+<div id="s3-ui" class="paragraph">
+<p><code>S.3.1</code>
+<strong>Graphical User Interface (GUI)</strong></p>
+</div>
 <div class="paragraph">
-<p><span class="icon"><i class="fa fa-warning"></i></span> Nothing available at this point.</p>
+<p>At this stage, all interactions with the system are performed through a web-based user interface. This interface is designed to be:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Accessible via standard web browsers.</p>
+</li>
+<li>
+<p>Divided into sections based on user roles (user vs. librarian).</p>
+</li>
+<li>
+<p>Responsive and easy to use, even for non-technical users.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The interface provides access to all key functionalities described in S.2: catalog search, reservations, account management, and administration.</p>
+</div>
+<div id="s3-api" class="paragraph">
+<p><code>S.3.2</code>
+<strong>Future API Integration (Planned)</strong></p>
+</div>
+<div class="paragraph">
+<p>Although no programmatic interface (API) is available in the current version, future development may include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A REST API for integration with external systems (e.g., university portals).</p>
+</li>
+<li>
+<p>Endpoints for retrieving book data, user status, or system statistics.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These additions would support automation, mobile applications, or third-party services.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1082,8 +1366,91 @@ Examples of interaction between the environment (or human users) and the system:
 </tr>
 </table>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_s_4_detailed_usage_scenarios_2">S.4 Detailed usage scenarios</h3>
+<div id="s4-scenario1" class="paragraph">
+<p><code>S.4.1</code>
+<strong>User Story: Reserving a Book</strong></p>
+</div>
 <div class="paragraph">
-<p><span class="icon"><i class="fa fa-warning"></i></span> Nothing available at this point.</p>
+<p>As a student, I want to search for a book and reserve it online, so I can pick it up as soon as it becomes available.</p>
+</div>
+<div class="paragraph">
+<p>→ The system shows the current status of the book.</p>
+</div>
+<div class="paragraph">
+<p>→ If the book is borrowed, the system adds me to the reservation queue.</p>
+</div>
+<div class="paragraph">
+<p>→ I receive an email notification when it’s my turn to pick up the book.</p>
+</div>
+<div id="s4-scenario2" class="paragraph">
+<p><code>S.4.2</code>
+<strong>User Story: Managing a Late Return</strong></p>
+</div>
+<div class="paragraph">
+<p>As a librarian, I want the system to automatically detect late returns and apply the corresponding rules, so I don’t have to check each user manually.</p>
+</div>
+<div class="paragraph">
+<p>→ The system flags the loan as overdue when the due date has passed.</p>
+</div>
+<div class="paragraph">
+<p>→ The user receives an automatic reminder and warning by email.</p>
+</div>
+<div class="paragraph">
+<p>→ If the book is still not returned, the system applies the penalty.</p>
+</div>
+<div class="paragraph">
+<p>→ I can review and override the penalty if needed through the admin panel.</p>
+</div>
+<div id="s4-scenario3" class="paragraph">
+<p><code>S.4.3</code>
+<strong>User Story: Managing My Account</strong></p>
+</div>
+<div class="paragraph">
+<p>As a regular user, I want to log in to my personal dashboard to check which books I’ve borrowed, when they are due, and if I can renew them.</p>
+</div>
+<div class="paragraph">
+<p>→ I access my dashboard after logging in.</p>
+</div>
+<div class="paragraph">
+<p>→ I see a list of current loans with due dates.</p>
+</div>
+<div class="paragraph">
+<p>→ I click on a book to renew it, if allowed.</p>
+</div>
+<div id="s4-scenario4" class="paragraph">
+<p><code>S.4.4</code>
+<strong>User Story: Adding a New Book</strong></p>
+</div>
+<div class="paragraph">
+<p>As a librarian, I want to add a new book to the catalog with all its details, so it can be borrowed by users.</p>
+</div>
+<div class="paragraph">
+<p>→ I access the admin panel.</p>
+</div>
+<div class="paragraph">
+<p>→ I fill in the book information (title, author, copies, status).</p>
+</div>
+<div class="paragraph">
+<p>→ The book appears in the public catalog immediately.</p>
+</div>
+<div id="s4-scenario5" class="paragraph">
+<p><code>S.4.5</code>
+<strong>User Story: Checking Availability Before Visiting</strong></p>
+</div>
+<div class="paragraph">
+<p>As a visitor, I want to check online if a book is available in the library, so I don’t waste time coming for nothing.</p>
+</div>
+<div class="paragraph">
+<p>→ I search the book by title on the public site.</p>
+</div>
+<div class="paragraph">
+<p>→ I see that it’s available and on which shelf.</p>
+</div>
+<div class="paragraph">
+<p>→ I go to the library to borrow it.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1100,9 +1467,100 @@ Classification of the behaviors, interfaces and scenarios (S.2, S.3 and S.4) by 
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><span class="icon"><i class="fa fa-warning"></i></span> Nothing available at this point.</p>
 </div>
+<div class="sect2">
+<h3 id="_s_5_prioritization_2">S.5 Prioritization</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S.2.1 – User Interface</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Main access point for users and librarians. Needed for all interactions.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Critical</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S.2.2 – Catalog Management Module</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Core of the system: handles book data and availability.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Critical</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S.2.3 – Loan and Reservation Module</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Manages borrowing and reservations. Central to system usage.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Critical</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S.2.4 – User Management Module</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stores and controls user access and rights.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Important</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S.2.5 – Notification System</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Improves user experience but can be delayed or simplified in MVP.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S.2.6 – Database</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ensures persistent and consistent storage of data.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Critical</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S.2.7 – Admin Tools</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Support daily operations of the librarians.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Important</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S.2.8 – Authentication System</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Protects system access, especially for sensitive librarian functions.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Critical</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S.3.1 – Graphical User Interface</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Essential for using the system.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Critical</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S.3.2 – Future API Integration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not required in the first version but useful later.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S.4.1 – Reserving a Book</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Core use case for users.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Critical</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S.4.2 – Managing a Late Return</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Important for enforcing library rules.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Important</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S.4.3 – Managing My Account</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Useful for user autonomy.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Important</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S.4.4 – Adding a New Book</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Necessary for catalog updates.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Critical</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S.4.5 – Checking Availability Before Visiting</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Improves experience but not strictly required.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_s_6_verification_and_acceptance_criteria">S.6 Verification and acceptance criteria</h3>
@@ -1288,7 +1746,7 @@ Initially, description of what the requirements process will be; later, report o
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-05-21 13:14:26 UTC
+Last updated 2025-05-22 09:10:32 UTC
 </div>
 </div>
 </body>
