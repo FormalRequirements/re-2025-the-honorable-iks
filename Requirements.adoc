@@ -1,9 +1,9 @@
-:title: Asciidoc Requirements Documentation Template
-:project: Project
+:title: Asciidoc Requirements Documentation
+:project: Library management system
 :version: 1.0
 :author: Honoris Ndereyimana & Ikram Filali
 :email: honoris-gratias.ndereyimana@etu.univ-tlse2.fr, ikram.filali@etu.univ-tlse2.fr
-:organization: University of Toulouse
+:organization: University of Toulouse Jean Jaurès, M2 ICE-LD
 :icons: font
 :toc: macro
 //--------------------------- PDF version
