@@ -1,4 +1,4 @@
-name: Generating requirements outpout from asciidoc.
+name: Generating requirements output from asciidoc.
 
 on:
   push:
