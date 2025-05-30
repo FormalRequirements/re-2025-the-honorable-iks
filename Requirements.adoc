@@ -7,12 +7,6 @@
 :toc: macro
 //--------------------------- PDF version
 :doctype: book
-
-// PDF attributes
-:pdf-theme: custom-theme
-:pdf-fontsdir: ./fonts
-:source-highlighter: rouge
-
 //:title-page-background-image: image::pegs.svg[pdfwidth=60%,align=center]
 // :title-logo-image: image::pegs.svg[top=1%, align=left, pdfwidth=2.5in]
 //:back-cover-image: image::pegs.svg[pdfwidth=160%,align=center]
