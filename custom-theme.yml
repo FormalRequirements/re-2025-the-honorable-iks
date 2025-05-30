@@ -1,6 +1,28 @@
 # custom-theme.yml
 extends: default
 
+
+# Font fix
+font:
+  catalog:
+    Noto Sans:
+      normal: NotoSans-Regular.ttf
+      bold: NotoSans-Bold.ttf
+      italic: NotoSans-Italic.ttf
+      bold_italic: NotoSans-BoldItalic.ttf
+  fallbacks:
+    - Noto Sans
+
+# fix codespan warning
+codespan:
+  font_family: Courier
+  font_size: $base_font_size_small
+  background_color: '#F8F8F8'
+  border_radius: 2
+  border_width: 0.5
+  border_color: '#E0E0E0'
+  padding: [4, 6, 4, 6]
+
 # ====== GLOBAL SETTINGS ======
 base:
   font_family: Noto Sans

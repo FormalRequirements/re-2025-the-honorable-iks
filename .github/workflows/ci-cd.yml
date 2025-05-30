@@ -25,7 +25,7 @@ jobs:
       id: asciiToPDF
       uses: tonynv/asciidoctor-action@master
       with:
-        program: "asciidoctor-pdf -a pdf-theme=custom-theme.yml -o ./reqOutput/LMS_requirements_Ikram_et_Honoris.pdf Requirements.adoc"
+        program: "asciidoctor-pdf -a pdf-theme=custom-theme.yml -a pdf-fontsdir=./fonts -o ./reqOutput/LMS_requirements_Ikram_et_Honoris.pdf Requirements.adoc"
     - name: Deploy generated file to github pages.
       uses: peaceiris/actions-gh-pages@v3
       with:
