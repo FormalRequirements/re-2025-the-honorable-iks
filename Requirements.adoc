@@ -51,12 +51,13 @@ This document follows the requirements documentation structure presented in the 
 |===
 | Version | Date | Comment 
 //----------------------------------------------
-| 1.0    | 2025-05-19 | Initial draft setup by {Honoris} and {Ikram}.
-| 1.1   | 2025-05-21 | {Ikram} added Goals requirements. 
-| 1.2 | 2025-05-22 | {Ikram} added System requirements.
-| 1.3 | 2025-05-22 | {Honoris} added github CI/CD workflow.
-| 1.4 | 2023-08-27 | {Ikram} added Project requirements. 
-| 1.5 | 2023-12-22 | Merged all feature branches to main.
+| 1.0 | 2025-05-19 | Initial draft setup.
+| 1.1 | 2025-05-21 | Requirements related to Goals. 
+| 1.2 | 2025-05-22 | System related requirements.
+| 1.3 | 2025-05-22 | Github workflow CI/CD implementation.
+| 1.4 | 2025-05-22 | Project related requirements. 
+| 1.5 | 2025-05-27 | Merged all feature branches to main.
+| 1.6 | 2023-05-30 | production ready versions https://tinyurl.com/ave2utmy[HTML] and https://tinyurl.com/yf5zmjec[PDF].
 //| _{version}_ | _{localdate}_ | _Current PDF version, by {jmb}_
 |=== 
 //----------------------------------------------
