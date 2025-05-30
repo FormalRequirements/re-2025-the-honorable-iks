@@ -7,52 +7,51 @@ section_content=""
 error=0
 
 while IFS= read -r line; do
-
-
-while IFS= read -r line; do
-  # Détection du début de la section à vérifier (après le warning)
-
-  if [[ "$line" == *"WARNING: This chapter should not be empty"* ]]; then
-    inside_section=true
-    section_start="$line"
-    section_content=""
-    continue
-  fi
-
-
-  if [[ "$inside_section" == true ]]; then
-    if [[ "$line" =~ ^(==|===) ]]; then
-      inside_section=false
-  # Si on est dans la section à vérifier
-  if [[ "$inside_section" == true ]]; then
-    # Vérifie si on rencontre un nouveau chapitre
-    if [[ "$line" =~ ^(==|===) ]]; then
-      inside_section=false
-      # Vérifie si la section n'a que des lignes vides
-
-      if [[ -z "$section_content" ]]; then
-        echo "Section vide détectée après le warning:"
-        echo "$section_start"
-        echo "---"
-
-        error=1
-      fi
-    else
-
-      fi
-    else
-      # Ajoute la ligne au contenu si elle n'est pas vide (hors espaces)
-
-      if [[ -n "$line" && ! "$line" =~ ^[[:space:]]*$ ]]; then
-        section_content+="$line"
-      fi
+    # Detect section start with WARNING
+    if [[ "$line" == *"WARNING: This chapter should not be empty"* ]]; then
+        inside_section=true
+        section_start="$line"
+        section_content=""
+        continue
     fi
-  fi
+
+    # Detect section end (headers)
+    if [[ "$inside_section" == true ]] && [[ "$line" =~ ^(==|===) ]]; then
+        inside_section=false
+        
+        # Check if section had content
+        if [[ -z "$section_content" ]]; then
+            echo "Empty section detected after warning:"
+            echo "$section_start"
+            echo "---"
+            error=1
+        fi
+    fi
+
+    # Collect non-empty content within section
+    if [[ "$inside_section" == true ]]; then
+        # Ignore empty lines and comments
+        if [[ -n "$line" ]] && 
+           [[ ! "$line" =~ ^[[:space:]]*$ ]] && 
+           [[ ! "$line" =~ ^// ]] && 
+           [[ ! "$line" =~ ^: ]]; then
+            section_content+="$line"
+        fi
+    fi
 done < "$file"
 
-
-if [[ "$error" -eq 1 ]]; then
-  echo "Erreur : au moins une section obligatoire est vide."
-  exit 1
+# Check last section if file ends without new header
+if [[ "$inside_section" == true ]] && [[ -z "$section_content" ]]; then
+    echo "Empty section detected at end of file:"
+    echo "$section_start"
+    echo "---"
+    error=1
 fi
 
+if [[ "$error" -eq 1 ]]; then
+    echo "Error: Mandatory section(s) are empty."
+    exit 1
+else
+    echo "All mandatory sections contain content."
+    exit 0
+fi
