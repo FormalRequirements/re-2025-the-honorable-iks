@@ -1,0 +1,24 @@
+## filename: custom-theme.yml
+extends: default
+
+header:
+#  font_size: $base_font_size_small * 1.2
+  font_size: $base_font_size_small * 1
+  line_height: 1
+#  height: $base_line_height_length * 1.5
+  height: $base_line_height_length * 1.2
+  vertical_align: middle
+  recto:
+    center:
+      content: '{document_name}'
+    left:
+      content: 'CONFIDENTIAL'
+    right:
+      content: '{revnumber}'
+  verso:
+    center:
+      content: $header_recto_center_content
+    left:
+      content: $header_recto_left_content
+    right:
+      content: $header_recto_right_content

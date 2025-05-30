@@ -8,7 +8,7 @@ on:
 jobs:
   generate_requirements:
     runs-on: ubuntu-latest
-    name: Generate and deploy HTML requirements. 
+    name: Generating HTML and PDF requirements using "asciidoctor" and deploy them on github pages. 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -21,6 +21,11 @@ jobs:
       uses: tonynv/asciidoctor-action@master
       with:
           program: "asciidoctor -o ./reqOutput/index.html Requirements.adoc"
+    - name: Asciidoctor text processing.
+      id: asciiToPDF
+      uses: tonynv/asciidoctor-action@master
+      with:
+        program: "asciidoctor-pdf -a pdf-theme=custom-theme.yml -o ./reqOutput/Lms_requirements_Honoris_Ikram.pdf Requirements.adoc"
     - name: Deploy generated file to github pages.
       uses: peaceiris/actions-gh-pages@v3
       with:
