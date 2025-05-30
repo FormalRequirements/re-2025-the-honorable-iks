@@ -1,0 +1,34 @@
+name: Generating requirements output from asciidoc.
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  generate_requirements:
+    runs-on: ubuntu-latest
+    name: Generating HTML and PDF requirements using "asciidoctor" and deploy them on github pages. 
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Check non empty chapters
+      run: |
+        chmod +x check_non_empty_chapters.sh
+        ./check_non_empty_chapters.sh
+    - name: Asciidoctor text processing.
+      id: asciiToHtml
+      uses: tonynv/asciidoctor-action@master
+      with:
+          program: "asciidoctor -o ./reqOutput/index.html Requirements.adoc"
+    - name: Asciidoctor text processing.
+      id: asciiToPDF
+      uses: tonynv/asciidoctor-action@master
+      with:
+        program: "asciidoctor-pdf -a pdf-theme=custom-theme.yml -o ./reqOutput/LMS_requirements_Ikram_et_Honoris.pdf Requirements.adoc"
+    - name: Deploy generated file to github pages.
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        # publish branch default: gh-pages
+        publish_dir: ./reqOutput  # default: public
