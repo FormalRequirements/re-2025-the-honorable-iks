@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<meta name="author" content="Honoris Ndereyimana &amp; Ikram Filali,honoris-gratias.ndereyimana@etu.univ-tlse2.fr, ikram.filali@etu.univ-tlse2.fr">
-<title>Asciidoc Requirements Documentation Template</title>
+<meta name="author" content="Ikram Filali &amp; Honoris Ndereyimana">
+<title>Library management system requirements documentation</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -438,11 +438,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book">
 <div id="header">
-<h1>Asciidoc Requirements Documentation Template</h1>
+<h1>Library management system requirements documentation</h1>
 <div class="details">
-<span id="author" class="author">Honoris Ndereyimana &amp; Ikram Filali</span><br>
-<span id="email" class="email"><a href="mailto:honoris-gratias.ndereyimana@etu.univ-tlse2.fr">honoris-gratias.ndereyimana@etu.univ-tlse2.fr</a>, <a href="mailto:ikram.filali@etu.univ-tlse2.fr">ikram.filali@etu.univ-tlse2.fr</a></span><br>
-<span id="revdate">1.0 -- 2025-05-22</span>
+<span id="author" class="author">Ikram Filali &amp; Honoris Ndereyimana</span><br>
+<span id="revdate">1.5 -- 2025-05-30</span>
 </div>
 </div>
 <div id="content">
@@ -482,7 +481,32 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2025-05-19</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Initial draft by <a href="https://github.com/nhonorisg">Honoris</a> and <a href="https://github.com/ikram-filali">Ikram</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initial draft setup by <a href="https://github.com/nhonorisg">Honoris</a> and <a href="https://github.com/ikram-filali">Ikram</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2025-05-21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/ikram-filali">Ikram</a> added Goals requirements.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2025-05-22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/ikram-filali">Ikram</a> added System requirements.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2025-05-22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/nhonorisg">Honoris</a> added github CI/CD workflow.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2023-08-27</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/ikram-filali">Ikram</a> added Project requirements.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2023-12-22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Merged all feature branches to main.</p></td>
 </tr>
 </tbody>
 </table>
@@ -514,24 +538,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_s_1_components">S.1 Components</a></li>
 <li><a href="#_s_2_functionality">S.2 Functionality</a></li>
-<li><a href="#_s_2_functionality_2">S.2 Functionality</a></li>
 <li><a href="#_s_3_interfaces">S.3 Interfaces</a></li>
-<li><a href="#_s_3_interfaces_2">S.3 Interfaces</a></li>
 <li><a href="#_s_4_detailed_usage_scenarios">S.4 Detailed usage scenarios</a></li>
-<li><a href="#_s_4_detailed_usage_scenarios_2">S.4 Detailed usage scenarios</a></li>
 <li><a href="#_s_5_prioritization">S.5 Prioritization</a></li>
-<li><a href="#_s_5_prioritization_2">S.5 Prioritization</a></li>
 <li><a href="#_s_6_verification_and_acceptance_criteria">S.6 Verification and acceptance criteria</a></li>
 </ul>
 </li>
 <li><a href="#_project">Project</a>
 <ul class="sectlevel2">
-<li><a href="#_p_1_roles_and_personnel">P.1 Roles and personnel</a></li>
+<li><a href="#_p_1_roles_and_personnel">P.1 Roles and Personnel 🧑‍💼📚</a></li>
 <li><a href="#_p_2_imposed_technical_choices">P.2 Imposed technical choices</a></li>
-<li><a href="#_p_3_schedule_and_milestones">P.3 Schedule and milestones</a></li>
-<li><a href="#_p_4_tasks_and_deliverables">P.4 Tasks and deliverables</a></li>
+<li><a href="#_p_3_schedule_and_milestones">P.3 Schedule and Milestones 📅</a></li>
+<li><a href="#_p_4_tasks_and_deliverables">P.4 Tasks and Deliverables 📦</a></li>
 <li><a href="#_p_5_required_technology_elements">P.5 Required technology elements</a></li>
-<li><a href="#_p_6_risk_and_mitigation_analysis">P.6 Risk and mitigation analysis</a></li>
+<li><a href="#_p_6_risk_and_mitigation_analysis_️">P.6 Risk and Mitigation Analysis ⚠️</a></li>
 <li><a href="#_p_7_requirements_process_and_report">P.7 Requirements process and report</a></li>
 </ul>
 </li>
@@ -547,7 +567,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 While the development team is the principal user of the other books, the Goals book addresses a wider audience: essentially, all stakeholders (see <a href="https://se.inf.ethz.ch/requirements/">Handbook</a>).</p>
 </div>
 <div class="paragraph">
-<p>It must contain enough information to provide â€” if read just by itself â€” a general sketch of the entire project.
+<p>It must contain enough information to provide a general sketch of the entire project.
 To this effect, chapter G.3 presents a short overview of the system and <a href="#G1">G.1</a> will typically include some key properties of the environment.
 As it addresses a wide readership, it should be clear and minimize the use of specialized technical terms.
 Together, <a href="#G1">G.1</a>, <a href="#G2">G.2</a> and <a href="#G3">G.3</a> describe the rationale for the project.
@@ -902,8 +922,15 @@ List of elements of the environment that may affect or be affected by the system
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><span class="icon"><i class="fa fa-warning"></i></span> Nothing available at this point.</p>
+<div id="e2-exp1" class="paragraph">
+<p><code>E.2.1</code>
+<strong>Physical Library Branches</strong>
+Geographically separate locations where books are stored and borrowed. Each maintains its own copy inventory.</p>
+</div>
+<div id="e2-exp2" class="paragraph">
+<p><code>E.2.2</code>
+<strong>Library Users (Patrons)</strong>
+Individuals registered to borrow materials. Have borrowing limits based on membership type.</p>
 </div>
 </div>
 <div class="sect2">
@@ -932,6 +959,14 @@ This chapter should not be empty (following the <em>Minimum Requirements Outcome
 </tr>
 </table>
 </div>
+<div id="e3-exp1" class="paragraph">
+<p><code>E.3.1</code>
+A single physical book copy can only be borrowed by one patron at a time.</p>
+</div>
+<div id="e3-exp2" class="paragraph">
+<p><code>E.3.2</code>
+Patrons may not borrow new books if they have overdue items or reached their borrowing limit.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_e_4_assumptions">E.4 Assumptions</h3>
@@ -947,8 +982,9 @@ Properties of the environment that may be assumed, with the goal of facilitating
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><span class="icon"><i class="fa fa-warning"></i></span> Nothing available at this point.</p>
+<div id="e4-exp1" class="paragraph">
+<p><code>E.4.1</code>
+Each book copy has a physically scannable identifier (barcode/RFID)</p>
 </div>
 </div>
 <div class="sect2">
@@ -965,8 +1001,9 @@ Elements and properties of the environment that the system will affect (see <a h
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><span class="icon"><i class="fa fa-warning"></i></span> Nothing available at this point.</p>
+<div id="e5-exp1" class="paragraph">
+<p><code>E.5.1</code>
+Reduce manual record-keeping by librarians for loans/returns</p>
 </div>
 </div>
 <div class="sect2">
@@ -983,8 +1020,9 @@ Properties of the environment that the systemâ€™s operation must preserve (
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><span class="icon"><i class="fa fa-warning"></i></span> Nothing available at this point.</p>
+<div id="e6-exp1" class="paragraph">
+<p><code>E.6.1</code>
+Total copies = Available copies + Borrowed copies + Reserved copies</p>
 </div>
 </div>
 </div>
@@ -1097,9 +1135,6 @@ This chapter should not be empty (following the <em>Minimum Requirements Outcome
 </tr>
 </table>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_s_2_functionality_2">S.2 Functionality</h3>
 <div id="s2-ui" class="paragraph">
 <p><code>S.2.1</code>
 <strong>User Interface</strong></p>
@@ -1305,9 +1340,6 @@ How the system makes the functionality of S.2 available to the rest of the world
 </tr>
 </table>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_s_3_interfaces_2">S.3 Interfaces</h3>
 <div id="s3-ui" class="paragraph">
 <p><code>S.3.1</code>
 <strong>Graphical User Interface (GUI)</strong></p>
@@ -1366,9 +1398,6 @@ Examples of interaction between the environment (or human users) and the system:
 </tr>
 </table>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_s_4_detailed_usage_scenarios_2">S.4 Detailed usage scenarios</h3>
 <div id="s4-scenario1" class="paragraph">
 <p><code>S.4.1</code>
 <strong>User Story: Reserving a Book</strong></p>
@@ -1467,9 +1496,6 @@ Classification of the behaviors, interfaces and scenarios (S.2, S.3 and S.4) by 
 </tr>
 </table>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_s_5_prioritization_2">S.5 Prioritization</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -1576,8 +1602,17 @@ Specification of the conditions under which an implementation will be deemed sat
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><span class="icon"><i class="fa fa-warning"></i></span> Nothing available at this point.</p>
+<div id="s6-exp1" class="paragraph">
+<p><code>S.6.1</code>
+<strong>Acceptance Test 1 - Loan Enforcement</strong>
+System must prevent checkout when:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>a) Patron has 5+ active loans.
+b) Patron has overdue items.
+c) Book copy is already checked out.</pre>
+</div>
 </div>
 </div>
 </div>
@@ -1598,21 +1633,56 @@ The Project book describes all the constraints and expectations not about the sy
 </table>
 </div>
 <div class="sect2">
-<h3 id="_p_1_roles_and_personnel">P.1 Roles and personnel</h3>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Main responsibilities in the project; required project staff and their needed qualifications (see <a href="https://se.inf.ethz.ch/requirements/">Handbook</a>).
-</td>
-</tr>
-</table>
+<h3 id="_p_1_roles_and_personnel">P.1 Roles and Personnel 🧑‍💼📚</h3>
+<div class="paragraph">
+<p>Main responsibilities and required qualifications for the project team.</p>
+</div>
+<div id="p1-pm" class="paragraph">
+<p><code>P.1.1</code>
+<strong>Project Manager</strong>
+Oversees the planning and progress of the project. Ensures deadlines are met and communication flows between team members. Should have skills in coordination, scheduling, and basic knowledge of library processes.</p>
+</div>
+<div id="p1-ba" class="paragraph">
+<p><code>P.1.2</code>
+<strong>Requirements Analyst</strong></p>
 </div>
 <div class="paragraph">
-<p><span class="icon"><i class="fa fa-warning"></i></span> Nothing available at this point.</p>
+<p>Collects and structures requirements based on input from librarians, users, and institutional goals. Needs strong communication, analytical thinking, and basic understanding of library workflows.</p>
+</div>
+<div id="p1-ux" class="paragraph">
+<p><code>P.1.3</code>
+<strong>UX/UI Designer</strong></p>
+</div>
+<div class="paragraph">
+<p>Designs interfaces that are intuitive for users and staff. Must understand accessibility, responsive design, and typical behaviors of library users.</p>
+</div>
+<div id="p1-dev" class="paragraph">
+<p><code>P.1.4</code>
+<strong>Full-Stack Developer</strong></p>
+</div>
+<div class="paragraph">
+<p>Implements the system’s functionalities across front-end and back-end. Requires skills in web development, database management, and integration of user-facing features with core logic.</p>
+</div>
+<div id="p1-devops" class="paragraph">
+<p><code>P.1.5</code>
+<strong>DevOps Engineer</strong></p>
+</div>
+<div class="paragraph">
+<p>Sets up and maintains the infrastructure, automates deployment workflows, and ensures that changes can be integrated and delivered continuously. Should be skilled in cloud services, container technologies, and CI/CD tools.</p>
+</div>
+<div id="p1-libconsult" class="paragraph">
+<p><code>P.1.6</code>
+<strong>Librarian Consultant</strong></p>
+</div>
+<div class="paragraph">
+<p>Provides domain knowledge: lending rules, cataloging standards, and user needs. Helps validate whether the system aligns with real library practices. Ideally someone with hands-on library experience.</p>
+</div>
+<div id="p1-writer" class="paragraph">
+<p><code>P.1.7</code>
+<strong>Requirements Editor / Technical Writer</strong></p>
+</div>
+<div class="paragraph">
+<p>Maintains the AsciiDoc documents, ensures clarity and coherence, and prepares the final export to PDF. Requires writing skills and basic familiarity with version control systems like Git.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1630,11 +1700,56 @@ Any a priori choices binding the project to specific tools, hardware, languages 
 </table>
 </div>
 <div class="paragraph">
-<p><span class="icon"><i class="fa fa-warning"></i></span> Nothing available at this point.</p>
+<p>The project is bound to specific technologies and design principles that will guide the development of the Library Management System (LMS).</p>
+</div>
+<div id="p2-exp1" class="paragraph">
+<p><code>P.2.1</code>
+<strong>Java 17 : </strong>
+Chosen as the primary programming language for back-end development due to its robustness, strong typing, and ecosystem support.</p>
+</div>
+<div id="p2-exp2" class="paragraph">
+<p><code>P.2.2</code>
+<strong>Spring Boot : </strong>
+Main framework for building the application. It simplifies the creation of REST APIs, integrates well with databases, and supports dependency injection out of the box.</p>
+</div>
+<div id="p2-exp3" class="paragraph">
+<p><code>P.2.3</code>
+<strong>PostgreSQL : </strong>
+Relational database system used to store data about users, books, loans, and reservations. Offers strong ACID compliance and is open source.</p>
+</div>
+<div id="p2-exp4" class="paragraph">
+<p><code>P.2.4</code>
+<strong>Docker : </strong>
+Used to containerize the application for easier deployment and environment consistency across development, testing, and production.</p>
+</div>
+<div id="p2-exp5" class="paragraph">
+<p><code>P.2.5</code>
+<strong>React.js : </strong>
+Front-end library chosen to develop a responsive and user-friendly web interface for both users and librarians.</p>
+</div>
+<div id="p2-exp6" class="paragraph">
+<p><code>P.2.6</code>
+<strong>Maven : </strong>
+Build and dependency management tool for compiling, testing, and packaging the Java backend.</p>
+</div>
+<div id="p2-exp7" class="paragraph">
+<p><code>P.2.7</code>
+<strong>JUnit 5 and Mockito : </strong>
+Used for unit and integration testing of backend services to ensure reliability and test coverage.</p>
+</div>
+<div id="p2-exp9" class="paragraph">
+<p><code>P.2.8</code>
+<strong>RESTful APIs : </strong>
+All communication between front-end and back-end is based on REST principles for simplicity and interoperability.</p>
+</div>
+<div id="p2-exp10" class="paragraph">
+<p><code>P.2.9</code>
+<strong>Git + GitHub : </strong>
+Used for version control and collaboration. All code is stored and managed through GitHub with branching strategies and CI pipelines.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_p_3_schedule_and_milestones">P.3 Schedule and milestones</h3>
+<h3 id="_p_3_schedule_and_milestones">P.3 Schedule and Milestones 📅</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1659,9 +1774,88 @@ This chapter should not be empty (following the <em>Minimum Requirements Outcome
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>This section outlines the major phases and expected milestones for the development of the Library Management System (LMS). Each milestone marks the delivery of a significant feature or stage of the project.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 60%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Milestone ID</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Target Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">M1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Project Setup</strong>
+Initialize Git repository, define technical stack (Java, Spring Boot, React, PostgreSQL), configure Docker, and prepare project documentation.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Week 1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">M2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Domain Modeling and Architecture Design</strong>
+Design the system&#8217;s core domain model using DDD and define high-level architecture (Hexagonal + REST APIs). Create database schema and component structure.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Week 2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">M3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>User &amp; Authentication Module</strong>
+Implement user registration, login, roles (user/librarian), and basic access control with JWT or session management.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Week 3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">M4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Catalog Management</strong>
+Implement book catalog: CRUD for books, metadata management, search and filtering capabilities.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Week 5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">M5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Loan &amp; Reservation System</strong>
+Develop features to allow book borrowing, returning, reservation queues, overdue handling, and validation rules.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Week 7</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">M6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Notification System</strong>
+Set up email and in-app notifications for due dates, reservation availability, and late return warnings.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Week 8</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">M7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Librarian Admin Dashboard</strong>
+Create an admin panel for librarians to manage books, users, and lending policies.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Week 9</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">M8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Front-end Integration</strong>
+Develop and connect React-based UI with all back-end endpoints. Ensure responsiveness and role-based views.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Week 10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">M9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Testing &amp; QA</strong>
+Conduct unit, integration, and UI testing (JUnit, Mockito, Cypress). Run performance and usability tests.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Week 11</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">M10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Final Deployment &amp; Documentation</strong>
+Deploy application using Docker. Deliver user manual, API documentation, and technical report.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Week 12</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect2">
-<h3 id="_p_4_tasks_and_deliverables">P.4 Tasks and deliverables</h3>
+<h3 id="_p_4_tasks_and_deliverables">P.4 Tasks and Deliverables 📦</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1686,6 +1880,105 @@ This chapter should not be empty (following the <em>Minimum Requirements Outcome
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>This section details the main tasks associated with each milestone from the project schedule and the corresponding deliverables.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 50%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Task ID</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Deliverable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set up GitHub repository, initialize folder structure, add README and project license.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Repository initialized with documentation baseline.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T1.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Define the technical stack and tools (Java, Spring Boot, PostgreSQL, React, Docker, GitHub Actions).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technical stack document in <code>/docs/</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Model domain entities (User, Book, Loan, Reservation) using DDD principles.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UML class diagram + Entity definitions in code.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T2.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Design the system architecture (Hexagonal + REST + PostgreSQL + CI).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Architecture overview document (<code>architecture.adoc</code>).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Implement user registration, authentication, and role-based access (JWT or sessions).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Working API for login/signup + user DB schema.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T4.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Develop book catalog CRUD (create, read, update, delete).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">REST endpoints for books + integration tests.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T4.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Implement search and filter functionality.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Search API + basic UI component for catalog.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T5.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Implement book borrowing and return workflow.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loan controller, rules engine, unit tests.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T5.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Manage reservations with FIFO queue and expiration logic.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reservation service + edge-case tests.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T6.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add email notification service (due dates, reservations).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mailer module + mock email tests.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T7.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Build admin dashboard with views for managing users and books.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">React UI pages for librarians + role restrictions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T8.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Connect React front-end to backend APIs using Axios or Fetch.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Front-end forms and data rendering working for MVP.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T9.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Write and run JUnit and Mockito tests for backend.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Test coverage report (&gt;80%) + CI status badge.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T9.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Perform manual and automated UI tests (e.g., Cypress).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Usability test report + bug list (if any).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T10.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Containerize application with Docker Compose (backend + frontend + DB).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>docker-compose.yml</code> + deployment instructions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T10.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Write user guide, API documentation, and installation manual.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/docs/</code> folder with complete documentation in AsciiDoc or Markdown.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_p_5_required_technology_elements">P.5 Required technology elements</h3>
@@ -1701,12 +1994,14 @@ External systems, hardware and software, expected to be necessary for building t
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><span class="icon"><i class="fa fa-warning"></i></span> Nothing available at this point.</p>
+<div id="p5-exp1" class="paragraph">
+<p><code>P.5.1</code>
+<strong>Barcode Scanners</strong>
+Hardware for quick book copy identification during check-in/check-out</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_p_6_risk_and_mitigation_analysis">P.6 Risk and mitigation analysis</h3>
+<h3 id="_p_6_risk_and_mitigation_analysis_️">P.6 Risk and Mitigation Analysis ⚠️</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1720,8 +2015,64 @@ Potential obstacles to meeting the schedule of P.4, and measures for adapting th
 </table>
 </div>
 <div class="paragraph">
-<p><span class="icon"><i class="fa fa-warning"></i></span> Nothing available at this point.</p>
+<p>This section identifies potential risks that may affect the successful completion of the project, particularly with respect to the tasks and milestones in P.4, along with mitigation strategies.</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Risk</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Mitigation Strategy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>R1 – Technical Complexity</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integrating multiple technologies (Spring, React, PostgreSQL, Docker) may cause unexpected bugs or delays.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Begin with a small proof of concept for each component. Plan extra buffer time in early sprints.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>R2 – Lack of familiarity with tools</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Team members may lack experience with some parts of the stack.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allocate time for guided onboarding, tutorials, and pair programming during the first two weeks.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>R3 – Feature creep</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">New feature ideas might be added mid-project, risking delay or scope loss.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stick to a defined MVP. Any additional features are moved to a backlog for post-M10 consideration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>R4 – Insufficient test coverage</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lack of automated tests could lead to regressions and unstable releases.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Define test tasks per milestone (P.4) and enforce CI checks on every commit.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>R5 – Incomplete requirements</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Some functional details might be misunderstood or missing at implementation time.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validate requirements early with librarian feedback. Update documentation iteratively.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>R6 – Integration delays</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Back-end and front-end teams might fall out of sync during API integration.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use API contracts (e.g., Swagger/OpenAPI) and mock servers to allow parallel development.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>R7 – Team availability or dropout</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Team members may become unavailable due to personal or academic reasons.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Distribute knowledge and responsibilities. Maintain clear documentation to ease handovers.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>R8 – Deployment issues</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Errors may arise during deployment or Docker configuration.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Test deployments regularly in staging environment using GitHub Actions.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_p_7_requirements_process_and_report">P.7 Requirements process and report</h3>
@@ -1737,8 +2088,19 @@ Initially, description of what the requirements process will be; later, report o
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><span class="icon"><i class="fa fa-warning"></i></span> Nothing available at this point.</p>
+<div id="p7-exp1" class="paragraph">
+<p><code>P.7.1</code>
+<strong>Process Steps:</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Stakeholder interviews with librarians</p>
+</li>
+<li>
+<p>Observation of current manual processes</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -1746,7 +2108,7 @@ Initially, description of what the requirements process will be; later, report o
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-05-22 09:15:40 UTC
+Last updated 2025-05-30 15:05:20 UTC
 </div>
 </div>
 </body>
